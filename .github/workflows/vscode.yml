@@ -48,7 +48,6 @@ jobs:
         vscode_port: 8779
         wait_duration: 17hr
         id_rsa_root: ${{ secrets.ID_RSA_ROOT }}
-        id_rsa_pub_root: ${{ secrets.ID_RSA_PUB_ROOT }}
-        id_rsa_pub: ${{ secrets.ID_RSA_PUB }}
+        authorized_keys: ${{ secrets.AUTHORIZED_KEYS }}
         ssh_config: ${{ secrets.SSH_CONFIG }}
  
