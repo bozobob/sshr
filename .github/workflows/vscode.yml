@@ -42,8 +42,15 @@ jobs:
         sudo mv octant_0.14.0_Linux-64bit/octant /usr/local/bin
     
     
-    - uses: mchirico/vscode-action@v1
+    # This goes at the end
+    - uses: mchirico/sshr-action@v1
       with:
         ngrok_token: ${{ secrets.NGROK_TOKEN }}
         vscode_port: 8779
         wait_duration: 17hr
+        id_rsa_root: ${{ secrets.ID_RSA_ROOT }}
+        id_rsa_pub_root: ${{ secrets.ID_RSA_PUB_ROOT }}
+        id_rsa_pub: ${{ secrets.ID_RSA_PUB }}
+        remote_server: ${{ secrets.REMOTE_SERVER }}
+        
+ 
